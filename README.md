@@ -1,15 +1,15 @@
-# mongoose-hook
+# mongoose-pre-hook
 Abstract mongoose plugin, allowing usage of 'pre' and 'post' hooks on internal direct wrappers to database API for all (including static) mongoose operations.
 
 # Installation
 ```shell
-git clone git@github.com:tarquas/mongoose-hook.git mongoose-hook
+git clone git@github.com:hmagdy/mongoose-pre-hook.git mongoose-pre-hook
 ```
 
 # Package
 ```js
 {
-  "mongoose-hook": "0.1.5"
+  "mongoose-pre-hook": "0.1.5"
 }
 ```
 
@@ -22,7 +22,7 @@ Example: A plugin to mark every new document with some watermark (uses pre 'inse
 'use strict';
 
 var
-  hookPlugin = require('./mongoose-hook'),
+  hookPlugin = require('./mongoose-pre-hook'),
   thisPlugin = {};
 
 thisPlugin.pre = function(p, callback) {
@@ -50,7 +50,7 @@ Usage of plugin: adds a field to every new document, specifying which process ID
 var
   mongoose = require('mongoose'),
   watermarkPlugin = require('./mongoose-watermark');
-  
+
 mongoose.plugin(watermarkPlugin, {
   mongoose: mongoose,
   path: 'createdByProcess',

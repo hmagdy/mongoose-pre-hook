@@ -9,7 +9,7 @@ git clone git@github.com:hmagdy/mongoose-pre-hook.git mongoose-pre-hook
 # Package
 ```js
 {
-  "mongoose-pre-hook": "1.1.1"
+  "mongoose-pre-hook": "1.1.3"
 }
 ```
 
